@@ -1,0 +1,135 @@
+einstieg bereits unsicher mit pin belegung!
+
+www.instructables.com/id/How-to-use-the-ESP8266-01-pins/
+
+
+
+verschiedene versionen!
+
+https://www.golem.de/news/mitmachprojekt-temperatur-messen-und-versenden-mit-dem-esp8266-1604-120378.html
+
+
+
+Firmware!, AT!
+
+fkainka.de/wlan-modul-verbindung-aufbauen/
+
+
+
+AT!
+
+http://thomaspfeifer.net/esp8266_wlan_seriell_modul_at_kommandos.htm
+
+https://github.com/espressif/ESP8266_AT/wiki/AT_Description
+
+https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf
+
+
+
+firmware! anpingen!
+
+https://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/
+
+
+
+anpingen!
+
+https://de.wikihow.com/Eine-IP-Adresse-anpingen
+
+
+
+TCP und Telnet!
+
+https://www.youtube.com/watch?v=MH-nlpQwDN8
+
+
+
+ESP!, AT Infos!
+
+http://web.archive.org/web/20150502082616/http://defcon-cc.dyndns.org/wiki/ESP8266#Update
+
+
+
+zusammenstecken!
+
+http://yaab-arduino.blogspot.de/2015/03/esp8266-wiring-schemas.html
+
+
+
+zusammenstecken!, AT!
+
+https://arduino-hannover.de/2014/12/11/wifi-kochbuch-mit-esp8266/
+
+
+
+Übersicht über ESP am ende!
+
+http://stefanfrings.de/esp8266/index.html
+
+
+
+firmware!, zusammenstecken!
+
+www.gunook.com/die-erste-verwendung-von-esp8266-mit-arduino-uno/
+
+https://ukhas.net/wiki/esp8266_firmware_update
+
+https://os.mbed.com/users/sschocke/code/WiFiLamp/wiki/Updating-ESP8266-Firmware
+
+
+
+firmware!, zusammenstecken!
+
+https://www.gunook.com/senden-sie-e-mail-mit-esp8266-und-arduino-uno/
+
+
+
+löten von adapter!, AT!
+
+https://www.youtube.com/watch?v=AlI3osIHkbU
+
+
+
+verschiedene modi!
+
+https://github.com/espressif/esptool/wiki/ESP8266-Boot-Mode-Selection
+
+https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process#esp-boot-modes
+
+
+
+--------------------------------------------------
+
+
+
+converter
+
+https://www.adafruit.com/product/395
+
+
+
+------------
+
+
+
+send email!: https://www.youtube.com/watch?v=n5WZ_BNRvRY
+
+smtp!: www.samlogic.net/articles/smtp-commands-reference.htm
+
+SMTP transport example!: http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol
+
+!https://www.gunook.com/senden-sie-e-mail-mit-esp8266-und-arduino-uno/
+
+
+
+
+
+
+
+Library simple!: https://github.com/sleemanj/ESP8266_Simple
+
+
+
+adafruit library!: https://github.com/adafruit/Fritzing-Library
+
+adafruit library example code!: https://github.com/AllAboutEE/Adafruit_ESP8266
