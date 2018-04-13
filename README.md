@@ -1,5 +1,5 @@
 # Informatik Projekt 3  
-## Grundlagen beim Arbeiten mit einem Arduino  
+## Grundlagen beim Arbeiten mit einem Arduino/NodeMCU  
 
 von Lennard Korte  
 Stormarnschule Ahrensburg  
