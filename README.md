@@ -414,10 +414,10 @@ int mailstate = 0;
 int reedState1 = 1;
 int reedState2 = 1;
  
-const char* ssid = "Home-Router";
-const char* password = "hgrl101413W";
+const char* ssid = "SSID hier einsetzen";
+const char* password = "Passwort hier einsetzen";
  
-Pushover po = Pushover("a6uykiupt877t4enqbs5k9rqoqijet","uctii2a9mw5ka364enq2vqq84kaio5");
+Pushover po = Pushover("user key","API");
 WiFiClient espClient;
 
 void setup() {
