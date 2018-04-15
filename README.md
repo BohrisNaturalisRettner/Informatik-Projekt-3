@@ -31,11 +31,16 @@ Klasse 12a
     * [Einbau des Resultats](#20)
     * [Schlusswort](#Schlusswort)  
 
+
+
+
 ### Vorwort <a name="Vorwort"></a>  
 
 Das zweite Informatik-Projekt Nr.2 war beendet und bei Herrn Buhl abgegeben, sodass mir offen stand, woran ich im Informatik-Unterricht zukünftig weiterarbeiten könnte. Es waren drei Informatik-Projekte für das gesamte Schuljahr vorgesehen. Zwei waren bereits abgeschlossen, sodass noch eines fehlte. Zum einen bestand die Möglichkeit, ein neues Projekt zu startet. Zum anderen bestand weiterhin die Möglichkeit, das gerade beendete Informatik-Projekt Nr.2 zu verbessern, bzw. zu überarbeiten, was nicht meinen Ansprüchen eines kompletten Projekts entsprach. Deswegen habe ich mich entschieden mir ein neues Informatik-Projekt zu suchen, welches mich begeistern würde und in den zeitlichen Rahmen des Unterrichts hinein passte. Ein neues Informatik-Projekt zu finden, welches beide Eigenschaften kombinierte, stellte sich für mich allerdings nicht ganz so schwierig wie gedacht heraus, was sich in den nächsten Stunden zeigte...  
 
 [→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
 
 ### 1. Unterrichtseinheit (15.02.2018) <a name="1"></a>  
 
@@ -121,9 +126,13 @@ Der Plan war es nun also, den Arduino mit dem Wifi-Modul, wie <a href="https://w
 Als Sensoren suchte ich mir ganz einfache <a href="https://www.amazon.de/gp/product/B01H3QGNMM/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1">Reedkontakte<a/> auf Amazon heraus, die spritzwasserfest genug waren, um im Briefkasten angebracht werden zu können. Weitere Sensoren für einen Ausbau des Projekts bestellte ich angesichts der bereits relativ hohen Rechnung zunächst noch nicht. Zu den Sensoren fehlten mir noch Kabel und Steckplatten zum Verbinden der einzelnen Teile. Ich wählte ein einfaches <a href="https://www.amazon.de/gp/product/B073X7GZ1P/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1">Kabel-Board-Set<a/> aus, welches wesentliche Kabel beinhaltete, damit ich nicht in die Not kommen konnte, durch zu wenige Kabel oder Steckplätze in meinen Arbeiten eingeschränkt zu sein.  
 Zum zusätzlichen Schutz vor Nässe blieb mir wohl nichts anderes übrig, als kreativ zu werden, wenn es so weit war...  
 
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
+
 #### Anschluss und erste Versuche der Steuerung <a name="7"></a>  
 
-Die Bestandteile waren angekommen. Also machte ich mich daran, das Wifi-Modul an den Arduino anzuschließen. Dies war gar nicht so leicht wie erwartet, da der Arduino den ich bestellt hatte nicht der originale war und zunächst nicht problemlos von der Software angenommen wurde. Ich starte die Konfiguration des IDE Programms neu und der Arduino wurde schließlich erkannt. Die Bezeichungen der Pins auf dem Adapter des Wifi-Moduls, wie z.B. VCC; verwirrten auch ein wenig, konnten aber nach kurzer Zeit aufgeklärt werden. Auch gab es anfangs Unklarheiten, wie ich das Modul mit dem Arduino verbinden sollte, da sich dies in zwei Richtungen auf den mitgelieferten Adapter stecken ließ. Ein kurzer Blick in die Lieferbeschreibung klärte dies jedoch recht schnell auf. Dadurch, dass die mitgelieferten Pins aber noch nicht fest am Adapter verlötet waren, gab es immer wieder einen Wackelkontakt, sodass das Wifi-Modul nicht richtig funktionierte und die ON-Leuchte dies bei leichtem Rütteln auch aufzeigte. Ich musste die Schaltung wieder auseinandernehmen und das Wifi-Modul mit anderen Kabeln und ohne Adapter an den Arduino und das Board anschließen. Das Löten nahm ich mir dann für die nächste Unterrichtseinheit vor.
+Die Bestandteile waren angekommen. Also machte ich mich daran, das Wifi-Modul an den Arduino anzuschließen. Dies war gar nicht so leicht wie erwartet, da der Arduino den ich bestellt hatte nicht der originale war und zunächst nicht problemlos von der Software angenommen wurde. Ich starte die Konfiguration des IDE Programms neu und der Arduino wurde schließlich erkannt. Die Bezeichungen der Pins auf dem Adapter des Wifi-Moduls, wie z.B. VCC; verwirrten auch ein wenig, konnten aber nach kurzer Zeit aufgeklärt werden. Auch gab es anfangs Unklarheiten, wie ich das Modul mit dem Arduino verbinden sollte, da sich dieses in zwei Richtungen auf den mitgelieferten Adapter stecken ließ. Ein kurzer Blick in die Lieferbeschreibung klärte dies jedoch recht schnell auf. Dadurch, dass die mitgelieferten Pins aber noch nicht fest am Adapter verlötet waren, gab es immer wieder einen Wackelkontakt, sodass das Wifi-Modul nicht richtig funktionierte und die ON-Leuchte dies bei leichtem Rütteln auch aufzeigte. Ich musste die Schaltung wieder auseinandernehmen und das Wifi-Modul mit anderen Kabeln und ohne Adapter an den Arduino und das Board anschließen. Das Löten nahm ich mir dann für die nächste Unterrichtseinheit vor.
 
 Nach dem Anschließen des Moduls versuchte ich endlich das Wifi-Board anzusteuern. Dies sollte eig. über einem Spannungskonwerter zwischen der AX/RX Schnittstelle geschehen, da der Arduino einen 5V Ausgang hat, das Board aber nur einen 3.3V-Eingang. Die Recherche ergab allerdings, dass man diesen auch weglassen könne.
 <a href="www.instructables.com/id/How-to-use-the-ESP8266-01-pins/">Diese Seite<a/> gibt einen relativ guten Überblick über die verschiedenen Sachen, die das Wifi-Modul machen kann. Allerdings war bereits der Einstieg ein wenig unklar, da nicht einheitlich aus den Quellen hervorging, wie das Wifi-Modul angeschlossen werden sollte. Auch war anfangs unklar, wie die Pinbelegung auf dem Adapter war. Ein kurzer Blick in die Produktbeschreibung der Bestellung klärte aber zumindest in diesem Punkt ein wenig auf. Ich schloss also alles nach der Variante an, die mir am sinnvollsten erschien. Problematisch war, dass die Pins des Adapters nicht fest waren, sondern nur aufgesteckt wurden, sodass ich diese erst noch festlöten musste. Wenn kein Adapter mitgeliefert wird, muss man sich stattdessen einen <a href="https://www.youtube.com/watch?v=AlI3osIHkbU"> selber bauen <a/>, um ihn auf der Steckplatte zu befestigen. Die Richtigkeit der Lötstellen überprüfte ich mit einem Voltmeter.
@@ -132,11 +141,13 @@ Ich öffnete also den Seriellen Monitor und bekam beim Einstecken des Boards jew
    <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/erste%20AT%20Befehle.PNG" alt="image" width="400"> 
    <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/erste%20AT%20Befehle%202.PNG" alt="image" width="400"> 
 
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
 
 
 #### Firmwareupdate zuerst!? <a name="8"></a>  
 
-Der erste Erfolg war also erreicht. Ich schaffte es sogar den ESP8266 mit den verschiedensten AT-Befehlen <a href="https://www.youtube.com/watch?v=AlI3osIHkbU">anzusteuern<a/>. Zunächst wollte ich allerdings ein Firmware-Update machen, wie es auf verschiedensten Seiten empfohlen wurde. Dazu recherchierte ich auf verschiedensten Internetseiten, die auch mit einem Firmwareupdate begannen. Ich wollte damit beginnen, um sicherzustellen, dass auch alles funktionierte. Dazu probierte ich verschiedenste Software aus. Die Prozesse schlugen zum großen Teil fehl, was aber keine Seltenheit war, wie sich nach einiger Recherche herausstellte. Als ein einfach gestaltetes Programm, mit dem man leicht ein Firmwareupdate machen konnte kristallisierte sich der ESP8266Flasher heraus, mit dem auch auf <a href="http://www.instructables.com/id/Intro-Esp-8266-firmware-update/">dieser<a/> Website gearbeitet wird.
+Der erste Erfolg war also erreicht. Ich schaffte es sogar den ESP8266 mit den verschiedensten AT-Befehlen <a href="https://www.youtube.com/watch?v=AlI3osIHkbU">anzusteuern<a/>. Zunächst wollte ich allerdings ein Firmware-Update machen, wie es auf verschiedensten Seiten empfohlen wurde. Dazu recherchierte ich auf verschiedensten Internetseiten, die ebenfalls mit einem Firmwareupdate starteten. Ich wollte damit beginnen, um sicherzustellen, dass auch alles funktionierte. Dazu probierte ich verschiedenste Software aus. Die Prozesse schlugen zum großen Teil fehl, was aber keine Seltenheit war, wie sich nach einiger Recherche herausstellte. Als ein einfach gestaltetes Programm, mit dem man leicht ein Firmwareupdate machen konnte kristallisierte sich der ESP8266Flasher heraus, mit dem auch auf <a href="http://www.instructables.com/id/Intro-Esp-8266-firmware-update/">dieser<a/> Website gearbeitet wird.
 
 Ich probierte auch verschiedene weitere Methoden/Programme aus um den ESP8266 zu flashen, da dieser nicht wirklich den Anschein machte, zu funktionieren, unabhängig davon, wie ich ihn mit dem Arduino zusammensteckte. Diese Methoden sind unter anderem auf folgenden Seiten beschrieben:  
 
@@ -147,9 +158,12 @@ Ich probierte auch verschiedene weitere Methoden/Programme aus um den ESP8266 zu
 <a href="fkainka.de/wlan-modul-verbindung-aufbauen/">fkainka.de<a/>  
 <a href="https://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/">allaboutcircuits.com<a/>  
 
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
 
 #### Die verschiedenen Modi <a name="9"></a>  
-sIch betone an dieser Stelle besonders, dass die Möglichkeiten den ESP8266 (kurz: ESP) anzuschließen von verschiedenen Quellen ganz unterschiedlich aufgefasst werden, was mich sehr durcheinander gebracht hat und sehr viel Zeit gekostet hat, da die Quellen sich auch häufig wiedersprechen. Aus diesem Grund habe ich mir eine Übersicht gemacht, die aufzeigt, was die am meisten zu findenden Varianten sind:
+Ich betone an dieser Stelle besonders, dass die Möglichkeiten den ESP8266 (kurz: ESP) anzuschließen von verschiedenen Quellen ganz unterschiedlich aufgefasst werden, was mich sehr durcheinander gebracht hat und sehr viel Zeit gekostet hat, da die Quellen sich auch häufig wiedersprechen. Aus diesem Grund habe ich mir eine Übersicht gemacht, die aufzeigt, was die am meisten zu findenden Varianten sind:
 
 Pin am ESP | Pin am UNO normal | Pin am UNO Firmware-Update  
 ---------- | ----------------- | ---------------
@@ -172,21 +186,28 @@ Informationsquellen sind unter anderem vor allem:
 <a href="https://www.gunook.com/senden-sie-e-mail-mit-esp8266-und-arduino-uno/">gunook.com<a/>  
  
 
-Es wird zwischen verschiedenen Modi unterschieden, mit denen der ESP beispielsweise geflasht werden konnte. Im großen und Ganzen stachen dabei der Flash und der normale Modus heraus. Diese waren offensichtlich von besonderer Bedeutung und Relevanz für das Projekt. Eine gute Übersicht über die Modi bieten auch folgende beide Seiten:  
+Es wird zwischen verschiedenen Modi unterschieden, mit denen der ESP beispielsweise geflasht werden konnte. Im Großen und Ganzen stachen dabei der Flash und der normale Modus heraus. Diese waren offensichtlich von besonderer Bedeutung und Relevanz für das Projekt. Eine gute Übersicht über die Modi bieten auch folgende beide Seiten:  
   
 https://github.com/espressif/esptool/wiki/ESP8266-Boot-Mode-Selection  
 https://github.com/esp8266/esp8266-wiki/wiki/Boot-Process#esp-boot-modes  
 
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
+
 #### Defekt? <a name="10"></a>  
   
-Trotz Stundenlanger Beschäftigung mit ein und demselben Thema konnte ich den ESP aber nicht mehr dazu bringen mit einer lesbaren Antwort auf die AT Befehle zu antworten. Es stellte sich die Frage, ob dies daran lag, dass die Firmware fehlerhaft war, oder ob der Chip des ESP, bei den vielen Versuchen mit den verschiedenen Anschlussmöglichkeiten, beschädigt worden war. Laut den verschiedenen Quellen, wovon ich ja bereits einige aufgelistet habe, konnte der ESP nämlich auch direkt am Arduino betrieben werden. Die vorherrschende Ansicht war, dass der ESP grundsätzlich mit 3.3V betrieben werden sollte, aber die RX/TX-Pins auch die 5V des Arduinos vertragen würden und man nicht zwangsläufig einen sogenannten Level-Shifter braucht, der die 5V-Spannung des Arduinos in 3.3V umwandelt. Es wurde allerdings auch erwähnt, dass dies keine sichere Aussage ist. Trotzdem gab es wohl beide Möglichkeiten und beide Möglichkeiten der Verkabelung sollten auch zum Erfolg führen. Auch in den Foren konnte ich noch einige Diskussionen darüber finden. Die Möglichkeit, dass das Wifi-Modul nicht funktionierte, weil es beim Start zu viel Strom verbrauchte, den der Arduino gar nicht zur Verfügung stellte konnte ich ausschließen. Einen Stromversorungsmangel konnte ich ausschließen, denn ich hatte zusätzlich zu dem USB-Kabel das 2A Netzteil an den Arduino angeschlossen. Somit musste ich keinen Kondensator in die Schaltung einbauen.   
+Trotz Stundenlanger Beschäftigung mit ein und demselben Thema konnte ich den ESP aber nicht mehr dazu bringen mit einer lesbaren Antwort auf die AT Befehle zu antworten. Es stellte sich die Frage, ob dies daran lag, dass die Firmware fehlerhaft war, oder ob der Chip des ESP, bei den vielen Versuchen mit den verschiedenen Anschlussmöglichkeiten, beschädigt worden war. Laut den verschiedenen Quellen, wovon ich ja bereits einige aufgelistet habe, konnte der ESP nämlich auch direkt am Arduino betrieben werden. Die vorherrschende Ansicht war, dass der ESP grundsätzlich mit 3.3V betrieben werden sollte, aber die RX/TX-Pins auch die 5V des Arduinos vertragen würden und man nicht zwangsläufig einen sogenannten Level-Shifter braucht, der die 5V-Spannung des Arduinos in 3.3V umwandelt. Es wurde allerdings auch erwähnt, dass dies keine sichere Aussage ist. Trotzdem gab es wohl beide Möglichkeiten und beide Möglichkeiten der Verkabelung sollten auch zum Erfolg führen. Auch in den Foren konnte ich noch einige Diskussionen darüber finden. Die Möglichkeit, dass das Wifi-Modul nicht funktionierte, weil es beim Start zu viel Strom verbrauchte, den der Arduino gar nicht zur Verfügung stellte, konnte ich ausschließen. Einen Stromversorungsmangel konnte ich ausschließen, denn ich hatte zusätzlich zu dem USB-Kabel das 2A Netzteil an den Arduino angeschlossen. Somit war es nicht nötig, einen Kondensator in die Schaltung einbauen.   
 
-Das Problem konnte ich aber trotz hartnäckiger Fehlersuche nicht mehr richtig lösen. Ich entschloss mich aus zeitlichen Gründen einfach einen neuen ESP zu bestellen, was angesichts des geringen Preises von wenigen Euros deutlich effizienter war. Dafür bestellte ich gleich drei Stück, um nicht wieder in Notlage zu kommen. Meiner Erfahrung nach konnten ein paar mehr auch nicht schaden, denn es gab noch viele weitere Möglichkeiten den ESP auch eigenständig zu betreiben, sodass ich über kurz oder lang wahrscheinlich sowieso noch mehr als einen benötigen würde.  
+Das Problem konnte ich aber trotz hartnäckiger Fehlersuche nicht mehr richtig lösen. Ich entschloss mich, aus zeitlichen Gründen dazu einfach einen neuen ESP zu bestellen, was angesichts des geringen Preises von wenigen Euros deutlich effizienter war. Dafür bestellte ich gleich drei Stück, um nicht wieder in Notlage zu kommen. Meiner Erfahrung nach konnten ein paar mehr auch nicht schaden, denn es gab noch viele weitere Möglichkeiten den ESP auch eigenständig zu betreiben, sodass ich über kurz oder lang wahrscheinlich sowieso noch mehr als einen benötigen würde.  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
 
 
 #### Mit dem Level Shifter auf Nummer Sicher <a name="11"></a>  
 
-Mit dem neuen ESP wollte ich dann auf "Nummer sicher" gehen. Ich schaute in der Schule nach, ob wir einen Levelshifter hatten , der auch die 5V-Signale des Arduinos für den ESP umwandeln sollte und umgekehrt. Ich bekam von unserem Kurslehrer auch gleich zwei verschiedene davon zur Verfügung gestellt, die einfach unbenutzt herumlagen. Ich war offenbar der erste, der diese verwendete:  
+Mit dem neuen ESP wollte ich dann auf "Nummer sicher" gehen. Ich schaute in der Schule nach, ob wir einen Levelshifter hatten, der auch die 5V-Signale des Arduinos für den ESP umwandeln sollte und umgekehrt. Ich bekam von unserem Kurslehrer auch gleich zwei verschiedene davon zur Verfügung gestellt, die einfach unbenutzt herumlagen. Ich war offenbar der erste, der diese verwendete:  
   
 1. 4-Bit Level Converter  
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/4-bit%20Level%20Converter.jpg" alt="image" width="350">  
@@ -196,6 +217,10 @@ Mit dem neuen ESP wollte ich dann auf "Nummer sicher" gehen. Ich schaute in der 
   
 Die entsprechenden Pins waren bei dem 4-Bit Lvel Converter bereits beigelegt sodass ich ihn direkt auf das Steckbrett stecken konnte. Die Konstruktion war etwas wackelig, aber wenn man nicht daran rüttelte, reichte es aus, um damit erste Versuche starten zu können. Ich recherchierte und eignete mir relativ schnell die Funktionsweise der Wandler an. Der neue ESP ließ sich darüber allerdings auch nicht richtig ansteuern. Um meine Kenntnisse zu überprüfen, nahm ich ein Voltmeter zur Hilfe. Ich schloss es entsprechend an den Arduino UNO an und machte verschiedenste Tests dazu. Es schien so, als wenn der Spannungswandler die Signale auf ALLE Pins der gegenüberliegenden Seite (mit je 6 Pins) übertragen würde. Meine Zweifel daran, dass dieser wirklich funktionierte wie er es sollte, veranlassten mich erst einmal dazu einen Versuch mit dem 8-Channel Level Shift zu starten. Auch hier waren die aufgesteckten Pins zum Verbinden mit dem Steckboard sehr wackelig, leider zu wackelig, um damit zu arbeiten. Kurzerhand entschied ich mich also dazu das Ganze entsprechend zusammenzulöten. Pins waren dem Shift zwar nicht beigelegt, allerdings hatte ich bei meinen Bestellungen einige Pin-Leisten extra zugesandt bekommen, sodass ich von diesen nur zweimal die entsprechende Länge von acht abknipsen musste. Der Level Shifter tat seine Dienste auch nach den Tests mit dem Voltmeter und dem ESP.  
 Es funktionierte alles einwandfrei, endlich!  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
 
 #### ESP AT-Befehle und Telnet <a name="12"></a>  
 
@@ -215,32 +240,38 @@ Zum anderen konnte ich das Wifi-Modul im cmd des Computers anpingen (wie zum Bei
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/W-Lan-Verbindung.PNG" alt="image" width="350">  
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/anpingen.PNG" alt="image" width="350">  
    
-Auch gelang es mir eine TCP Verbindung herzustellen und mit PUTTY im Telnet direkte Nachrichten an den seriellen Monitor zu übertragen, wie es unter anderem auch in https://www.youtube.com/watch?v=MH-nlpQwDN8">diesem Video<a/> beschrieben wird. Das gab mir dann wieder die nötige Motivation, da dies aufgrund meiner bisherigen Erfahrungen mit Netzwerken dieser Art, ohne Umwege klappte.
+Auch gelang es mir eine TCP Verbindung herzustellen und mit PUTTY im Telnet direkte Nachrichten über Wifi an den seriellen Monitor zu übertragen, wie es unter anderem auch in https://www.youtube.com/watch?v=MH-nlpQwDN8">diesem Video<a/> beschrieben wird. Das gab mir dann wieder die nötige Motivation, da dies, aufgrund meiner bisherigen Erfahrungen mit Netzwerken dieser Art, ohne Umwege klappte.
 
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/telnet%20putty.PNG" alt="image" width="350">  
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/telnet%20putty2.PNG" alt="image" width="350">  
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/telnet%20putty3.PNG" alt="image" width="350">  
-  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
   
 #### Mail versandt? <a name="13"></a>  
 
-Als nächtes befasste ich mich mit <a href="https://www.gunook.com/senden-sie-e-mail-mit-esp8266-und-arduino-uno/">verschiedenen Möglichkeiten<a/> mit dem Arduino in Verbindung mit dem ESP eine <a href="https://www.youtube.com/watch?v=n5WZ_BNRvRY">Mail an einen SMTP-Server<a/> (verlinkt ist die erste Wahl, der ich später weiter nachgegangen bin) zu versenden. Die Grundprinzipien zur Verwendung der Bibliotheken (<a href="https://github.com/AllAboutEE/Adafruit_ESP8266">hier<a/> ein Codebeispiel zu Bibliothek Nr.2), die dem ganzen zur Hilfe genommen werden sollten waren auch relativ schnell klar.:
+Als nächtes befasste ich mich mit <a href="https://www.gunook.com/senden-sie-e-mail-mit-esp8266-und-arduino-uno/">verschiedenen Möglichkeiten<a/> mit dem Arduino in Verbindung mit dem ESP eine <a href="https://www.youtube.com/watch?v=n5WZ_BNRvRY">Mail an einen SMTP-Server<a/> (verlinkt ist die erste Wahl, der ich später weiter nachgegangen bin) zu versenden. Die Grundprinzipien zur Verwendung der Bibliotheken (<a href="https://github.com/AllAboutEE/Adafruit_ESP8266">hier<a/> ein Codebeispiel zu Bibliothek Nr.2), die dem ganzen zur Hilfe genommen werden sollten, waren auch relativ schnell klar.:
 
 1. https://github.com/sleemanj/ESP8266_Simple
 2. https://github.com/adafruit/Fritzing-Library
 
-Auch die Grundlagen zur <a href="http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">Kommunikation mit einem SMTP-Server<a/> und der <a href="www.samlogic.net/articles/smtp-commands-reference.htm">SMTP-Kommandos<a/> erfasste ich relativ schnell. Dennoch bekam ich nach dem Upload der zum Teil vorgefertigten Codes immer wieder Fehlermeldungen, dass Modul nicht antwortete. Auch andere Versuche mit verschiedenen Bibliotheken brachten mich nicht weiter voran. Insgesamt waren die Fortschritte bis hierher sehr ernüchternd. Der Fehler konnte eigentlich überall liegen. Ich probierte verschiedene Möglichkeiten aus, das Modul mit dem Arduino über den Level Shifter zu verbinden, was ich ja in vorherigen Versuchen ebenfalls etliche Male getan hatte, um den Fehlern auf den Grund zu gehen. Auch die RX und TX Anschlüsse vertauschte ich, da in verschiedenen Foren unterschiedliche Angaben gemacht wurden. Ich probierte es also selber aus, was alles funktionieren könnte. Dank des Level-Shifters musste ich mir nämlich keine Sorgen mehr darüber machen, dass der ESP beschädigt wird. Auch stellte sich für mich die Frage, was RX/TX überhaupt sei. Letztendlich führte mich das immer wieder auf die <a href="https://de.wikipedia.org/wiki/Universal_Serial_Bus">USB Schnittstelle<a/> die schließlich ähnlich funktioniert.  
-   
+Auch die Grundlagen zur <a href="http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">Kommunikation mit einem SMTP-Server<a/> und der <a href="www.samlogic.net/articles/smtp-commands-reference.htm">SMTP-Kommandos<a/> erfasste ich relativ schnell. Dennoch bekam ich nach dem Upload des zum Teil vorgefertigten Codes immer wieder Fehlermeldungen, dass das Modul nicht antwortete. Auch andere Versuche mit verschiedenen Bibliotheken brachten mich nicht weiter voran. Insgesamt waren die Fortschritte bis hierher sehr ernüchternd. Der Fehler konnte eigentlich überall liegen. Ich probierte verschiedene Möglichkeiten aus, das Modul mit dem Arduino über den Level Shifter zu verbinden, was ich ja in vorherigen Versuchen ebenfalls etliche Male getan hatte, um den Fehlern auf den Grund zu gehen. Auch die RX und TX Anschlüsse vertauschte ich, da in verschiedenen Foren unterschiedliche Angaben gemacht wurden. Ich probierte es also selber aus, was alles funktionieren könnte. Dank des Level-Shifters musste ich mir nämlich keine Sorgen mehr darüber machen, dass der ESP beschädigt wird. Auch stellte sich für mich die Frage, was RX/TX überhaupt sei. Letztendlich führte mich das immer wieder auf die <a href="https://de.wikipedia.org/wiki/Universal_Serial_Bus">USB Schnittstelle<a/> die schließlich ähnlich funktioniert.  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
    
 #### Reedkontakte <a name="14"></a>  
 
-Trotz all der Bemühungen gelang es trotzdem nicht, eine einfache Mail zu versenden. Auch wenn ich dafür extra verschiedene unkonventionelle Anbieter ausfindig machte und ausprobierte, die einen unterschlüsselten Versand möglich machten, etc. Ich entschied mich also mir dazu einen Rat von etwas erfahreneren Programmierern einzuholen und stieß dabei auf verschiedene Arduino Foren. Darunter war auch ein deutsches Forum, auf dem ich mein Problem einfach beschrieb und veröffentlichte, in der Hoffnung, konstruktive Vorschläge zu meiner Problemstellung zu erhalten.
+Trotz all der Bemühungen gelang es trotzdem nicht, eine einfache Mail zu versenden. Auch wenn ich dafür extra verschiedene unkonventionelle Anbieter ausfindig machte und ausprobierte, die einen unverschlüsselten Versand möglich machten, etc. Ich entschied mich also dazu, mir einen Rat von etwas erfahreneren Programmierern einzuholen und stieß dabei auf verschiedene Arduino Foren. Darunter war auch ein deutsches Forum, auf dem ich mein Problem einfach beschrieb und veröffentlichte, in der Hoffnung, konstruktive Vorschläge zu meiner Problemstellung zu erhalten.
 Die Zeit, die ich nun hatte, bis ich eine Antwort bekam, nutzte ich dafür, mir die Reedkontakte genauer von innen und von außen anzuschauen. Auch ihre <a href="https://de.wikipedia.org/wiki/Reedschalter#/media/File:Reed-relais-ani.gif">Funktionsweise<a/> des Reedschalters wurde dadurch klarer und noch einmal bestätigt.  
    
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/Reedkontakt%20außen.JPG" alt="image" width="200">  
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/Reedkontakt%20innen.JPG" alt="image" width="200">  
 
-Ich versuchte mich erst an einem kleinen Programm, welches ausgibt, ob die Reedkontakte offen oder geschlossen sind. Dabei fiel auf, dass ich Widerstände, wie bei vorherigen Projekten bei einem Knopf, einbauen musste, um die Genauigkeit zu erhöhen und äußeren Einflüssen entgegenzuwirken.
+Ich versuchte mich erst an einem kleinen Programm, welches ausgibt, ob die Reedkontakte offen oder geschlossen sind. Dabei fiel auf, dass ich keine Widerstände, wie bei vorherigen Projekten bei einem Knopf, einbauen musste, um die Genauigkeit zu erhöhen und äußeren Einflüssen entgegenzuwirken.
 ```javascript
 int in = 12;
 int stat = 0; //Null heißt, dass der Kontakt geschlossen ist, es fließt Strom
@@ -262,7 +293,7 @@ void loop()
   delay(100);
 }
 ```
-Darauf folgte dann der Grundaufbau meines Programmes in der ArduinoIDE, was die Kontakte auswertet und später entsprechende Nachrichten versenden soll. Dazu sollten dann später weitere Ideen ergänzt werden.  
+Darauf folgte dann der Grundaufbau meines Programmes in der Arduino IDE, das die Kontakte auswertet und später entsprechende Nachrichten versenden soll. Dazu sollten dann später weitere Ideen ergänzt werden.  
 ```javascript
 int count = 0;
 
@@ -306,13 +337,17 @@ void loop() {
 }
 ```  
 
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
+
 #### von Grund auf neu <a name="15"></a>  
   
 Schließlich bekam ich eine Antwort auf meinen <a href="https://www.arduinoforum.de/arduino-Thread-ESP8266-E-Mail-Versandt-mit-Library">Post im Arduino-Forum<a/>. Von einer Person wurde mein Problem falsch und von einer anderen richtig erfasst. So bekam ich nach einiger Zeit einen Vorschlag, der im ersten Moment etwas radikal wirkte, aber mich zum Nachdenken brachte. Darin wurde mein bisheriges Konzept der Benachrichtigung über E-Mail mit einem Arduino und einem ESP komplett über den Haufen geworfen. Stattdessen wurde mir empfohlen die entsprechenden Nachrichten per Pushnachricht über ein NodeMCU direkt aufs Handy zu senden.  
 
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/nodemcu.jpg" alt="image" width="400">  
 
-Das <a href="https://www.amazon.de/IZOKEE-Internet-Development-Wireless-Kompatibel/dp/B01N4OYOKD/ref=sr_1_2?ie=UTF8&qid=1523553725&sr=8-2&keywords=esp8266+node">NodeMCU<a/> ist ein Board, welches ebenfalls einen ESP8266 verbaut hat und über alle weiteren Komponenten verfügt, die es für den alleinigen Betrieb benötigt, wenn man ihn alleine über einen USB-Anschluss flashen und mit Strom versorgen möchte. Dazu <a href="https://alexbloggt.com/esp8266-erste-erfahrungen/">hier<a/> einmal eine kurze Übersicht von ALEX.BLOGGT, der auch weitere gute Projekte veröffentlicht hat, nicht nur speziell zu NodeMCU. Zudem ist er deutlich stromsparender als der Arduino UNO zusammen mit dem ESP und braucht auch kein zusätzliches Netzteil bei der Stromversorung über den USB-Anschluss, auch bei Verwendung des ESP's. Die räumliche Größe ist für den Betrieb in einem Briefkasten deutlich besser geeignet.  
+Das <a href="https://www.amazon.de/IZOKEE-Internet-Development-Wireless-Kompatibel/dp/B01N4OYOKD/ref=sr_1_2?ie=UTF8&qid=1523553725&sr=8-2&keywords=esp8266+node">NodeMCU<a/> ist ein Board, welches ebenfalls einen ESP8266 verbaut hat und über alle weiteren Komponenten verfügt, die es für den alleinigen Betrieb benötigt, wenn man ihn alleine über einen USB-Anschluss flashen und mit Strom versorgen möchte. Dazu <a href="https://alexbloggt.com/esp8266-erste-erfahrungen/">hier<a/> einmal eine kurze Übersicht von ALEX.BLOGGT, der auch weitere gute Projekte veröffentlicht hat, nicht nur speziell zu NodeMCU. Zudem ist der NodeMCU deutlich stromsparender als der Arduino UNO zusammen mit dem ESP und braucht auch kein zusätzliches Netzteil bei der Stromversorung über den USB-Anschluss, auch bei Verwendung des ESP's nicht. Die räumliche Größe ist für den Betrieb in einem Briefkasten deutlich besser geeignet.  
 Ich bestellte also kurzerhand ein solches Board. Dadurch wurden die restlichen Teile, die ich dann nicht mehr brauchen würde, aber nicht als unnötig abgestempelt und weggelegt, denn ich bin mir sicher, dass ich diese später noch bei anderen Projekten gebrauchen werde und möglicherweise eine eigene Bibliothek für den alleinigen Betrieb des ESP erstelle? Wer weiß...?
 Das Board habe ich dann einfach mit dem Micro-USB-Kabel einer Powerbank am PC angeschlossen.  
    
@@ -337,12 +372,16 @@ vorher - nachher
 Nachdem alles wieder an seinem Platz war, versiegelte ich die Rückseite des Steckboards mit Klebeband, damit nichts herausfiel. Ich stellte das Board wieder richtig herum auf den Tisch, damit ich nun das NodeMCU darauf befestigen konnte. Mit etwas stärkerem Druck auf die Pins von außen und von oben war es schnell fest mit dem Board verbunden.  
 
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/nodemcu%20mit%20steckplatte.JPG" alt="image" width="400">  
-  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
+
 #### Pushnotification <a name="16"></a>  
 
 Es fehlten nur noch die Kabel, Netzteil und Reed Sensoren. Ich hatte allerdings noch keine Ahnung, welche Belegung die einzelnen Pins des NodeMCU's hatten und wie diese mit dem ESP8266 darauf verbunden waren. Deswegen begann ich mit der Recherche.
 
-Ich schaute mir die Empfehlung der Forum-Gemeinschaft zu Pushbullet genau an. Fand dann aber relativ schnell heraus, dass die Funktionen davon nur sehr begrenzt waren und ab einer bestimmten Zhal von Benachrichtigungen eine Gebühr anfällt. Deshalb schaute ich mich noch weiter um und stieß auf ganz verschiedene Wege Pushbenachrichtigungen mit einem ESP oder genauer einem NodeMCU einzurichten. Im folgenden einmal die Beiträge, die ich mir zu dem Thema anschaute:  
+Ich schaute mir die Empfehlung der Forum-Gemeinschaft zu Pushbullet genau an. Fand dann aber relativ schnell heraus, dass die Funktionen davon nur sehr begrenzt waren und ab einer bestimmten Zhal von Benachrichtigungen eine Gebühr anfällt. Deshalb schaute ich mich noch weiter um und stieß auf ganz verschiedene Wege Pushbenachrichtigungen mit einem ESP oder genauer einem NodeMCU einzurichten. Im folgenden einmal einige Beiträge, die ich mir zu dem Thema anschaute:  
   
 https://dzone.com/articles/iot-push-notifications-arduino  
 https://community.blynk.cc/t/nodemcu-esp8266-dht11-temperature-push-message/9215  
@@ -357,7 +396,7 @@ https://www.geekstips.com/android-push-notifications-esp8266-arduino-tutorial/
 https://www.youtube.com/watch?v=nVdR0Ryr12k  
 https://alexbloggt.com/esp8266-pushover/  
 
-Der zuletzt aufgelistete <a href="https://alexbloggt.com/esp8266-pushover/">Beitrag<a/> traf das Vorhaben meines Erachtens am besten und bot eine gute Beschreibung, mit der ich schnell etwas anfangen konnte, wie ich es bereits vorher von Alex gewohnt war. Außerdem war die App mittlerweile kostenlos und das Benachrichtigungslimit lag monatlich bei 7500, sodass ich keine Zusatzkosten zu befürchten hatte. Ich probierte beschriebenes direkt aus. Auch das Codebeispiel half mir dabei. Für das Einrichten der Pushbenachrichtigungen muss nur eine Bibliothek in die Arduino IDE implementiert werden und in den Code eingebunden werden. Dann kann die Pushnachricht mit Hilfe einer API, die einem Bei der Erstellung und Einrichtung des Kontos bei Pushover zugewiesen wird, ganz einfach versendet werden. Natürlich nur unter der Vorraussetzung, dass bereits eine Internetverbindung besteht. Mit dem erstellten Konto muss man sich dann nur noch bei der App des Anbieters anmelden und kan direkt Pushnachrichten empfangen. Wichtig ist, dies in den Benachrichtigungseinstellungen des Handys zu aktivieren und der App die Rechte dafür zu geben.  
+Der zuletzt aufgelistete <a href="https://alexbloggt.com/esp8266-pushover/">Beitrag<a/> traf das Vorhaben meines Erachtens am besten und bot eine gute Beschreibung, mit der ich schnell etwas anfangen konnte, wie ich es bereits vorher von Alex gewohnt war. Außerdem war die App mittlerweile kostenlos und das Benachrichtigungslimit lag monatlich bei 7500, sodass ich keine Zusatzkosten zu befürchten hatte. Ich probierte beschriebenes direkt aus. Auch das Codebeispiel half mir dabei. Für das Einrichten der Pushbenachrichtigungen muss nur eine Bibliothek in die Arduino IDE implementiert werden und in den Code eingebunden werden. Dann kann die Pushnachricht mit Hilfe einer API, die einem bei der Erstellung und Einrichtung des Kontos bei Pushover zugewiesen wird, ganz einfach versendet werden. Natürlich nur unter der Vorraussetzung, dass bereits eine Internetverbindung besteht. Mit dem erstellten Konto muss man sich dann nur noch bei der App des Anbieters anmelden und kann direkt Pushnachrichten empfangen. Wichtig ist, dies in den Benachrichtigungseinstellungen des Handys zu aktivieren und der App die Rechte dafür zu geben.  
    
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/image%20registration.PNG" alt="image" width="400">  
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/image%20API%20creation.PNG" alt="image" width="400">  
@@ -366,22 +405,30 @@ Der zuletzt aufgelistete <a href="https://alexbloggt.com/esp8266-pushover/">Beit
 
 Das funktionierte bei mir auch sehr gut, bis ich nach ein wenig Spielerei am Code eine Fehlermeldung von der Arduino IDE bekam, dass der ESP nicht mehr geflasht werden könne. Auch ein wiederholter Versuch änderte daran nichts.  
 
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
+
 #### Fehlerbehebung/Firmwareupdate <a name="17"></a>  
 
-Auch weitere Fehlerdetails gaben keinen genügenden Aufschluss um daraus schlau zu werden. Die Firewall hatte ich wie immer für diesen Zweck deaktiviert. Könnte es vielleicht daran liegen, dass ich den Flash Button betätigt hatte? Ich hatte bemerkt, dass der serielle Monitor bei dem <a href="https://blog.thesen.eu/esp8266-reset-probleme-loesen-und-relais-stabil-schalten/">Reset<a/> nur noch wirre Zeichen ausspuckte und der NodeMCU alle paar Sekunden neu startete. Eine kurze Recherche ergab die Antwort: Nein, der Flash Button hat keine größeren Auswirkungen auf die Firmware, sofern er nicht während des Flash-Vorgangs betätigt würde.
-Trotzdem ließ mich das Gefühl nicht los, dass etwas bei der Firmware nicht stimmte. So führte ich ein <a href="https://www.youtube.com/watch?v=Af9UCSM0Ic8">Firmwareupdate<a/> durch, mit dem Risiko, dass dies alles nur noch viel schlimmer machen würde, aber mir blieb ja keine Wahl. Angesichts der vorherigen Erfahrungen war dies natürlich gewagt. Es funktionierte aber einwandtfrei. Und dafür brauchte ich nicht einmal neue Software installieren, da ich den ESP8266Flasher ja bereits vorher verwendet hatte.  
-Trotzdem funktionierte das neue Laden des Codes auf das NodeMCU nicht wie gewollt. Ich probierte in den IDE Einstellungen die Option aus, nicht nur den Sketch zu laden, wie es vorher der Fall war, sondern alle Flas-Inhalte zu entfernen. Nach einem erneuten Versuch damit funktionierte alles hervorragend. Das Problem war gelöst.  
-   
+Auch weitere Fehlerdetails gaben keinen genügenden Aufschluss um daraus schlau zu werden. Die Firewall hatte ich wie immer für diesen Zweck deaktiviert. Könnte es vielleicht daran liegen, dass ich den Flash Button betätigt hatte? Ich hatte bemerkt, dass der serielle Monitor bei dem <a href="https://blog.thesen.eu/esp8266-reset-probleme-loesen-und-relais-stabil-schalten/">Reset<a/> nur noch wirre Zeichen ausspuckte und der NodeMCU alle paar Sekunden neu startete. Eine kurze Recherche ergab die Antwort: Nein, der Flash Button hat keine größeren Auswirkungen auf die Firmware, sofern er nicht während des Lade-Vorgangs betätigt würde.
+Trotzdem ließ mich das Gefühl nicht los, dass etwas bei der Firmware nicht stimmte. So führte ich ein <a href="https://www.youtube.com/watch?v=Af9UCSM0Ic8">Firmwareupdate<a/> durch, mit dem Risiko, dass dies alles nur noch viel schlimmer machen würde, aber mir blieb ja keine Wahl. Angesichts der vorherigen Erfahrungen war dies natürlich gewagt. Es funktionierte aber einwandtfrei. Und dafür brauchte ich nicht einmal neue Software zu installieren, da ich den ESP8266Flasher ja bereits im vorherigen Projekt verwendet hatte.  
+Trotzdem funktionierte das neue Laden des Codes auf das NodeMCU nicht wie gewollt. Ich probierte in den IDE Einstellungen die Option aus, nicht nur den Sketch zu laden, wie es vorher der Fall war, sondern alle Flas-Inhalte zu entfernen. Nach einem erneuten Versuch damit funktionierte alles hervorragend. Das Problem war vorrübergehend gelöst.  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
+
 #### Hinzufügen weiterer Features <a name="18"></a>  
    
-Aber natürlich war das noch nicht alles. Die While Funktion war mir neu und so suchte ich nach einer kurzen Erklärung zu dieser Funktion. Ich fand ein optimales <a href="https://www.youtube.com/watch?v=QlDH2SApocM">Video<a/> dazu, sodass ich die Funktion auch in meinem späteren Code für die "Warten"-Anzeige bei der Verbindungsherstellung zum Router einbinden wollte.
-Nun war ja bereits ein wichtiges Ziel erreicht. Das System sollte stromsparend sein. Der NodeMCU war auch deutlich effizienter als der vorherige Aufbau. Mir kam die Idee den NodeMCU in den SleepModus zu versetzen, sodass dieser noch weniger Strom verbrauchte. Das war allerdings nicht zielführend, wie meine <a href="https://github.com/esp8266/Arduino/issues/644">Recherche<a/> ergab. Alternativ wollte ich aber das Wifi ausschalten, wenn es nicht gebraucht wurde. Das sollte Strom sparen, die dauerhafte Strahlung vermindern, die von dem ESP ausging und Sicherheitsrisiken vermindern, sofern das NodeMCU keine Aktivität am Briefkasten warnahm. Unsinnig war der Schlafmodus des ESP's deshalb, weil er in der Zeit keine Messungen aufnehmen kann und somit für den Zweck der Aktivitäterfassung unbrauchbar wäre. Aus diesem Grund fällt auch die Möglichkeit weg, des ESP im <a href="https://tutorials-raspberrypi.de/monatelanger-esp8266-batteriebetrieb-mittels-deep-sleep/">Akkubetrieb<a/> zu nutzen.  
+Aber natürlich war das noch nicht alles. Die While-Funktion im Beispiel-Code war mir neu und so suchte ich nach einer kurzen Erklärung zu dieser Funktion. Ich fand ein optimales <a href="https://www.youtube.com/watch?v=QlDH2SApocM">Video<a/> dazu, sodass ich die Funktion auch in meinem späteren Code für die "Warten"-Anzeige bei der Verbindungsherstellung zum Router einbinden wollte.
+Nun war ja bereits ein wichtiges Ziel erreicht. Das System sollte stromsparend sein. Der NodeMCU war auch deutlich Strom-effizienter als der vorherige Aufbau. Mir kam die Idee den NodeMCU zusätzlich in den SleepModus zu versetzen, sodass dieser noch weniger Strom verbrauchte. Das war allerdings nicht zielführend, wie meine <a href="https://github.com/esp8266/Arduino/issues/644">Recherche<a/> ergab. Alternativ wollte ich aber das Wifi ausschalten, wenn es nicht gebraucht wurde. Das sollte wenigstens ein wenig Strom sparen, die dauerhafte Strahlung vermindern, die von dem ESP ausging und Sicherheitsrisiken von außen vermindern, sofern das NodeMCU keine Aktivität am Briefkasten warnahm. Unsinnig war der Schlafmodus des ESP's deshalb, weil der NodeMCU in der Zeit keine Messungen aufnehmen kann und somit für den Zweck der Aktivitäterfassung unbrauchbar wäre. Vor allem aus diesem Grund fällt auch die Möglichkeit weg, den ESP im <a href="https://tutorials-raspberrypi.de/monatelanger-esp8266-batteriebetrieb-mittels-deep-sleep/">Akkubetrieb<a/> zu nutzen.  
 
-Eine weitere Möglichkeit den Funktionsumpfang des ESP's zu erweitern bestand darin die Zeit zur Verfügung zu haben, um entsprechende Informationen im Seriellen Monitor anzeigen zu lassen, eine Entsprechende Nachricht an das Mobilgerät zu senden oder möhlicherweise in der Zukunft Statistiken in einer datenbank zu führen. Dazu sollte die Zeit von einem öffentlichen NTP (Zeitserver) abgefragt werden und in bestimmte Bedingungen im Code eingefügt werden. Mein <a href="https://www.arduinoclub.de/2016/05/07/arduino-ide-esp8266-ntp-server-timezone/">erster Versuch<a/> mit zwei verschiedenen "Time"-Libraries funktionierte nicht wie erwartet und stellte sich im Code auch als ziemlich unhandlich heraus. Deshalb suchte ich nach einer <a href="https://www.youtube.com/watch?v=qzkNXhubWLg">Alternative<a/> und fand diese schließlich auch. Dazu gehörte die <a href="https://github.com/SensorsIot/NTPtimeESP">NTPtimeESP-Librarie<a/>, die schon deutlich vielversprechender aussah. Sie funktionierte auch relativ schnell und ließ sich gut in meinen bereits vorhandenen Code einbinden. So konnte ich auch ein RTC-Modul außer Acht lassen.  
+Eine weitere Möglichkeit den Funktionsumpfang des ESP's zu erweitern bestand darin, die aktuelle Zeit zur Verfügung zu haben, um entsprechende Informationen im Seriellen Monitor anzeigen zu lassen, eine entsprechende Nachricht an das Mobilgerät zu senden oder möglicherweise in der Zukunft Statistiken in einer Datenbank zu führen. Dazu sollte die Zeit von einem öffentlichen NTP (Zeitserver) abgefragt werden und in bestimmte Bedingungen im Code eingefügt werden. Mein <a href="https://www.arduinoclub.de/2016/05/07/arduino-ide-esp8266-ntp-server-timezone/">erster Versuch<a/> mit zwei verschiedenen "Time"-Libraries funktionierte nicht wie erwartet und stellte sich im Code auch als ziemlich unhandlich heraus. Deshalb suchte ich nach einer <a href="https://www.youtube.com/watch?v=qzkNXhubWLg">Alternative<a/> und fand diese schließlich auch. Dazu gehörte die <a href="https://github.com/SensorsIot/NTPtimeESP">NTPtimeESP-Librarie<a/>, die schon deutlich vielversprechender aussah. Sie funktionierte auch relativ schnell und ließ sich gut in meinen bereits vorhandenen Code einbinden. So konnte ich auch ein RTC-Modul außer Acht lassen.  
 
 Ich versuchte die <a href="https://www.arduino.cc/reference/en/language/structure/control-structure/else/">if else/else-Funktion<a/> einzubauen. Dies funktionierte allerdings nicht wie erwartet, sondern wurde aus unerklärlichen Gründen nur in einzelnen if-Funktionen akzeptiert.  
   
-Eine weitere Funktion die ich implementierte war die millis Funktion, die ich dazu verwendete, dass der Briefkasten beim wiederholten Öffnen des Einwurfschlitzes innerhalb von 30 Sekunden nicht reagierte, sodass ein Nachwerfen des Postbooten nicht zu einer Doppelten Benachrichtigung führt und Missbrauch der Funktion entgegengewirkt wird. Die Benachrichtigungsfunktion für die Leerungsklappe bleibt davon unberührt, da diese ohnehin nur ausgelöst wird, wenn Post vorhanden ist, sodass darauf keine Rücksicht genommen werden muss. Diese Funktion implementierte ich mit dem "Millis()"-Befehl. Eine gut zusammengefasste Erklärung dazu ist <a href="https://www.youtube.com/watch?v=YP9xQWqFOKg">hier<a/> zu finden.  
+Eine weitere Funktion die ich implementierte war die millis Funktion, die ich dazu verwendete, dass der NodeMCU beim wiederholten Öffnen des Einwurfschlitzes am Briefkasten innerhalb von 30 Sekunden nicht reagierte, sodass ein Nachwerfen des Postbooten nicht zu einer doppelten Benachrichtigung führt und Missbrauch der Funktion entgegengewirkt wird. Die Benachrichtigungsfunktion für die Leerungsklappe bleibt davon unberührt, da diese ohnehin nur ausgelöst wird, wenn Post vorhanden ist, sodass darauf keine Rücksicht genommen werden muss. Diese Funktion implementierte ich mit dem "Millis()"-Befehl. Eine gut zusammengefasste Erklärung dazu ist <a href="https://www.youtube.com/watch?v=YP9xQWqFOKg">hier<a/> zu finden.  
 
 Jetzt fehlten nur noch die Reed-Kontakte. Überraschenderweise brauchte ich hierbei keine Wiederstände für eine Erdung, um dessen Status zuverlässig auszumachen. Anhand des Schaltplans des NodeMCU leitete ich mir her, welche Pins frei waren (D1 und D2), an denen ich die Reedkontakte anschließen konnte, um einen INPUT zu definieren.  
 
@@ -392,6 +439,10 @@ Jetzt fehlten nur noch die Reed-Kontakte. Überraschenderweise brauchte ich hier
 Die Reedkontakte hatten keine richtigen Stecker am Ende ihrer Kabel, weshalb sie nicht stabil an ihrem Platz festgehalten wurden, wenn man sie in das Steckbrett steckte. Aus diesem Grund funktionierte ich einige Kabel zu Verbindungsstücken um. Diese ließen am Metallteil der Kabelenden mit Hilfe eines spitzen Gegenstandes zusammendrücken. Das Kabel konnte so darin fixiert werden.  
 
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/System.JPG" alt="image" width="400">  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
 
 #### Code für Smarten Briefkasten <a name="19"></a>  
 
@@ -547,6 +598,10 @@ if ((lastMillis + 30000) <= millis()) {
 }
 ```
 
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
+
+
 #### Einbau des Endresultats <a name="20"></a>  
 
 Zuletzt musste ich nur noch eine Verpackung finden. Ich nutzte eine leichte und kleine Plastikverpackung, die weitestgehend vor äußeren Einflüssen schützte und für den Schutz im Briefkasten allemal ausreichen sollte. Als Netzteil nutzte ich ein einfaches USB-Netzteil von einem Mobilgerät. Eine Steckdose ist außen am Haus bereits vorhanden. Die Reedkontakte hatten bereits klebende Rückseiten, sodass diese einfach an den Klappenöffnungen befestigt werden konnten.  
@@ -560,6 +615,9 @@ Auch im Seriellen Monitor erfolgt eine Ausgabe. Dabei bedeutet die Null immer, d
   
 Pushnotification:  
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/Status%20auf%20Mobilgerät.PNG" alt="image" width="400">  
+
+[→ zurück zum Anfang](#Inhaltsverzeichnis)  
+
 
 
 ### Schlusswort <a name="Schlusswort"></a>  
