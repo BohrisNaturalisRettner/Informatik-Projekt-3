@@ -151,13 +151,19 @@ Der erste Erfolg war also erreicht. Ich schaffte es sogar den ESP8266 mit den ve
 
 Ich probierte auch verschiedene weitere Methoden/Programme aus um den ESP8266 zu flashen, da dieser nicht wirklich den Anschein machte, zu funktionieren, unabhängig davon, wie ich ihn mit dem Arduino zusammensteckte. Diese Methoden sind unter anderem auf folgenden Seiten beschrieben:  
 
-<a href="www.gunook.com/die-erste-verwendung-von-esp8266-mit-arduino-uno/">  
-<a href="<a href="https://ukhas.net/wiki/esp8266_firmware_update">ukhas.com<a/>  
+<a href="http://www.gunook.com/die-erste-verwendung-von-esp8266-mit-arduino-uno/">gunook.com<a/>  
+  
+<a href="https://ukhas.net/wiki/esp8266_firmware_update">ukhas.com<a/>  
+  
 <a href="https://os.mbed.com/users/sschocke/code/WiFiLamp/wiki/Updating-ESP8266-Firmware">os.mbed.com<a/>  
+  
 <a href="https://www.gunook.com/senden-sie-e-mail-mit-esp8266-und-arduino-uno/">gunook.com<a/>  
+  
 <a href="fkainka.de/wlan-modul-verbindung-aufbauen/">fkainka.de<a/>  
+  
 <a href="https://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/">allaboutcircuits.com<a/>  
-
+  
+  
 [→ zurück zum Anfang](#Inhaltsverzeichnis)  
 
 
