@@ -57,7 +57,7 @@ Grundsätzlich orientierte ich mich dabei an folgenden Vorgaben, die ich in <a h
 
 <img src="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/images/LiquidCrystal-Display%20Technical%20Specs.PNG" alt="image" width="400">  
 
-Auch die Vorgaben zu dem Thema auf <a href="https://www.arduino.cc/en/Tutorial/HelloWorld?from=Tutorial.LiquidCrystal">Arduino.cc</a> gaben mir Aufschluss dazu, wie ich das Display verkabeln konnte. Außerdem schaute ich mir wiederholt ein <a href="https://www.youtube.com/watch?v=ftRSZ6tCl1w">YouTube-Video</a> an, dessen Erklärungen schnell auch ein etwas tieferes Verständnis möglich machten. Meinen selbst programmierten Code dazu ist <a href="https://github.com/lakgiter/Informatik-Projekt-3/tree/master/code1">hier</a> zu finden.  
+Auch die Vorgaben zu dem Thema auf <a href="https://www.arduino.cc/en/Tutorial/HelloWorld?from=Tutorial.LiquidCrystal">Arduino.cc</a> gaben mir Aufschluss dazu, wie ich das Display verkabeln konnte. Außerdem schaute ich mir wiederholt ein <a href="https://www.youtube.com/watch?v=ftRSZ6tCl1w">YouTube-Video</a> an, dessen Erklärungen schnell auch ein etwas tieferes Verständnis möglich machten. Mein selbst programmierter Code dazu ist <a href="https://github.com/lakgiter/Informatik-Projekt-3/tree/master/code1">hier</a> zu finden.  
 
 [→ zurück zum Anfang](#Inhaltsverzeichnis)  
 
