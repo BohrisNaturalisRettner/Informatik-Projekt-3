@@ -1,13 +1,13 @@
 # Informatik Projekt 3  
 ## Grundlagen beim Arbeiten mit einem Arduino/NodeMCU  
-
+  
 von Lennard Korte  
 Stormarnschule Ahrensburg  
 Klasse 12a  
 18.02.2018  
-
+  
 ### <a name="Inhaltsverzeichnis"></a> Inhaltsverzeichnis
-
+  
 * **[Vorwort](#Vorwort)**  
 * **[Erste Unterrichtseinheit](#1)**  
 * **[Zweite Unterrichtseinheit](#2)**  
@@ -30,26 +30,26 @@ Klasse 12a
     * [Code für Smarten Briefkasten](#19)
     * [Einbau des Resultats](#20)
     * [Schlusswort](#Schlusswort)  
-
-
-
-
+  
+  
+  
+  
 ### Vorwort <a name="Vorwort"></a>  
 
 Das zweite Informatik-Projekt Nr.2 war beendet und bei Herrn Buhl abgegeben, sodass mir offen stand, woran ich im Informatik-Unterricht zukünftig weiterarbeiten könnte. Es waren drei Informatik-Projekte für das gesamte Schuljahr vorgesehen. Zwei waren bereits abgeschlossen, sodass noch eines fehlte. Zum einen bestand die Möglichkeit, ein neues Projekt zu startet. Zum anderen bestand weiterhin die Möglichkeit, das gerade beendete Informatik-Projekt Nr.2 zu verbessern, bzw. zu überarbeiten, was nicht meinen Ansprüchen eines kompletten Projekts entsprach. Deswegen habe ich mich entschieden mir ein neues Informatik-Projekt zu suchen, welches mich begeistern würde und in den zeitlichen Rahmen des Unterrichts hinein passte. Ein neues Informatik-Projekt zu finden, welches beide Eigenschaften kombinierte, stellte sich für mich allerdings nicht ganz so schwierig wie gedacht heraus, was sich in den nächsten Stunden zeigte...  
-
+  
 [→ zurück zum Anfang](#Inhaltsverzeichnis)  
-
-
-
+  
+  
+  
 ### 1. Unterrichtseinheit (15.02.2018) <a name="1"></a>  
 
 Zunächste zeigte ich unserem Lehrer Herrn Buhl am Anfang der Informatik-Stunde das gerade beendete Projekt, bei dem ich einen Wecker auf dem Arduino UNO mit Multie-Function-Shield programmiert habe, der allerdings immer noch Verbesserungsmöglichkeiten aufweiste. Deshalb machte mich Herr Buhl auf die sogenannte <a href="https://wlanowski.de/arduinouhr-rtc-ds1307/">RTC-Module</a> (Real-Time-Clock) aufmerksam, welche zuließ, die aktuelle Uhrzeit mit Hilfe eines Quartz-Moduls einstellen zu können und somit den Wecker in seinen Funktionen zu erweitern. Herr Buhl schlug vor, einmal im Teilelager (Schrank) nachzuschauen, ob ein solches Modul bereits vorhanden sei und zeigte mir dabei ein LCD-Display. Ein RTC-Modul konnte leider nicht mehr gefunden werden. Es wurde also der Kauf eines solchen Moduls geplant, was natürlich ein paar Tage dauern konnte. Währenddessen beschlossen wir, dass es ganz interessant wäre das Display auszuprobieren und ein wenig damit zu arbeiten. Dazu musste es allerdings erst noch mit den Pins zum Anschließen an das Arduino-UNO-Board verlötet werden, was ich mir dann für die nächste Stunde vornahm. Dazu zeigte mir Herr Buhl eine Anleitung in Form eines <a href="https://github.com/lakgiter/Informatik-Projekt-3/blob/master/documents/DE_SolderComic.pdf/">Comics</a>, wie man am besten lötet. Nach ein wenig Recherche zur Funktionsweise des <a href="https://www.buydisplay.com/default/blue-character-display-20x4-lcd-module-arduino-white-led-backlight">LCD-Displays (Blue Character Display 20x4 LCD Module)</a> war die Stunde auch schon vorüber.  
-
+  
 [→ zurück zum Anfang](#Inhaltsverzeichnis)  
-
-
-
+  
+  
+  
  ### 2. Unterrichtseinheit (16.02.2018) <a name="2"></a>  
 
 Anfang der nächsten Informatikstunde las ich mir noch einmal genauer das Comic zum Löten der Pins an das LCD-Displays durch und stellte fest, dass es für mich, wegen meiner bereits gemachten Löt-Erfahrungen beim Reparieren von defekten Steckern, keine besonders großen Neuerungen beinhaltete. Also fing ich relativ schnell damit an zu löten und war auch entsprechend schnell fertig. Nachdem ich mir sicherheitshalber die Hände gewaschen und den Tisch aufgeräumt hatte, suchte ich online auf verschiedensten Internet-Seiten nach der Funktionsweise des LCD-Displays, damit ich es auch mit dem Arduino ansteuern konnte. Dazu gab es verschiedene Vorgehensweisen, die aber auf der gleichen Grundfunktionsweise beruhten. Fast alle LiquidCrystal-Displays für Arduinos werden von einem <a href="https://de.wikipedia.org/wiki/HD44780">HD44780 Schaltkreis von Hitachi</a> angesteuert, der im Modul integriert ist und sich über die angelöteten Pins ansteuern lässt. Die Displays für Arduinos unterscheiden sich also grundsätzlich nur in ihrer Größe und in den Einstellungen, die dafür vorzunehmen sind. Für die Ansteuerung dieses Schaltkreises gibt es eine vorgefertigte <a href="https://www.arduino.cc/en/Reference/LiquidCrystal">LiquidDisplay-Library<a/>, mit der auf dem Arduino mit einfachen Befehlen Zeichen dargestellt werden können und welche zusätzliche Funktionen, wie z.B. die <a hrf="https://www.arduino.cc/en/Tutorial/LiquidCrystalAutoscroll">AutoScroll-Funktion</a> für neu hinzugefügte Texte beinhaltet. Ich versuchte nach dem Löten zunächst das LCD-Display an den Arduino anzuschließen. Es gelang mir allerdings nur die Hintergrundbeleuchtung zu aktivieren, nicht aber einen Schriftzug zu erzeugen. So neigte sich die Schulstunde bei detailierter Fehlersuche und Recherche zeitlich relativ schnell dem Ende und ich musste meine Arbeit erst einmal unterbrechen. Ich baute die Schaltkreise zunächst wieder ab.  
